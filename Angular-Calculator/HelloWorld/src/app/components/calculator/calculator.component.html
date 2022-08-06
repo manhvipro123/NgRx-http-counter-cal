@@ -1,0 +1,45 @@
+<h1>Calculator</h1>
+<div class="container">
+  <form name="form">
+    <div class="display">
+      <div class="displayResult">{{value$ | async}}</div>
+      <div class="displayResult">{{count$ | async}}</div>
+    </div>
+    <div class="buttons">
+      <div class="row">
+        <input type="button" name="Del" value="D" (click)="enterOperator('DEL')">
+        <input type="button" name="Clear" value="C"  (click)="enterOperator('AC')">
+        <input type="button" name="Percent" value="%"  (click)="enterOperator('%')">
+        <input type="button" name="" value="+/-" (click)="enterOperator('+/-')">
+      </div>
+      <div class="row">
+        <input type="button" name="b7" value="7" (click)="enterNumber('7')">
+        <input type="button" name="b8" value="8" (click)="enterNumber('8')">
+        <input type="button" name="b9" value="9" (click)="enterNumber('9')">
+        <input type="button" name="addb" value="+" (click)="enterOperator('+')">
+      </div>
+
+      <div class="row">
+        <input type="button" name="b4" value="4" (click)="enterNumber('4')">
+        <input type="button" name="b5" value="5" (click)="enterNumber('5')">
+        <input type="button" name="b6" value="6" (click)="enterNumber('6')">
+        <input type="button" name="subb" value="-" (click)="enterOperator('-')">
+      </div>
+
+      <div class="row">
+        <input type="button" name="b1" value="1" (click)="enterNumber('1')">
+        <input type="button" name="b2" value="2" (click)="enterNumber('2')">
+        <input type="button" name="b3" value="3" (click)="enterNumber('3')">
+        <input type="button" name="mulb" value="*" (click)="enterOperator('*')">
+      </div>
+
+      <div class="row">
+        <input type="button" name="b0" value="0" (click)="enterNumber('0')">
+        <input type="button" name="potb" value="." (click)="enterNumber('.')">
+        <input type="button" name="divb" value="/" (click)="enterOperator('/')">
+        <input type="button" class="red" value="=" (click)="enterOperator('=')">
+      </div>
+    </div>
+
+  </form>
+</div>
